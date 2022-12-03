@@ -17,6 +17,6 @@ jobs:
 
       - name: Run second command
         run: ./gradlew copyNatives
-        
+
       - name: Run code
-        run: ./gradlew clean build
+        run: ./gradlew run
