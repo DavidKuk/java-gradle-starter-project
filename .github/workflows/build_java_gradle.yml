@@ -1,0 +1,22 @@
+name: Build java application with gradle
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out repository with java source codes with gradle
+        uses: actions/checkout@v3
+        
+      - name: Clean build
+        run: ./gradlew clean build
+
+      - name: Run second command
+        run: ./gradlew copyNatives
+        
+      - name: Run code
+        run: ./gradlew clean build
