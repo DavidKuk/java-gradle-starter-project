@@ -11,9 +11,9 @@ jobs:
     steps:
       - uses: actions/setup-java@v3
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'adopt'
-          
+
       - name: Checking out repository with java source codes with gradle
         uses: actions/checkout@v3
         
